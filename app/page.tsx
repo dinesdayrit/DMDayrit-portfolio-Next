@@ -1,10 +1,11 @@
+import Hero from "@/components/Hero";
 import NavMenu from "@/components/NavMenu";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
       <NavMenu />
+      <Hero />
     </main>
   );
 }
