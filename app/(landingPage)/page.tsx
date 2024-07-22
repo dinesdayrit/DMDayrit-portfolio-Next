@@ -6,12 +6,10 @@ import Hero from "@/components/Hero";
 export default function Home() {
   return (
     <main>
-      <div className="flex flex-col justify-center items-center">
-        <Hero />
-        <About />
-        <Experience />
-        <Footer />
-      </div>
+      <Hero />
+      <About />
+      <Experience />
+      <Footer />
     </main>
   );
 }
