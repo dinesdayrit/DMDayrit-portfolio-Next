@@ -1,18 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-scroll";
 
 const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navBg, setNavBg] = useState("bg-transparent");
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const changeNavBg = () => {
+    if (window.scrollY >= 90) {
+      setNavBg("bg-sky-800");
+    } else {
+      setNavBg("bg-transparent");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavBg);
+    return () => {
+      window.removeEventListener("scroll", changeNavBg);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-0 flex items-center justify-center  w-screen h-24 z-10 transition-colors duration-500">
+    <nav
+      className={`fixed top-0 flex items-center justify-center  w-screen h-24 z-10 transition-colors duration-500 ${navBg}`}
+    >
       <div className="flex justify-between items-center h-full w-full px-4 lg:px-16">
         <div>
           <h1 className="font-bold text-xl text-gray-300">DMD</h1>
