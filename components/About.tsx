@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <section
-      className="flex flex-col justify-center items-center max-w-7xl py-16"
+      className="flex flex-col justify-center items-center py-16"
       id="about"
     >
       <h2 className="font-serif font-bold text-xl md:text-3xl mb-5 text-sky-700">
