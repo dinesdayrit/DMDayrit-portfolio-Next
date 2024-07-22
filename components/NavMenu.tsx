@@ -12,9 +12,7 @@ const NavMenu = () => {
   };
 
   return (
-    <nav
-      className={`fixed flex items-center justify-center bg-slate-800  w-screen h-24 z-10 transition-colors duration-500`}
-    >
+    <nav className="fixed top-0 flex items-center justify-center bg-slate-800 w-screen h-24 z-10 transition-colors duration-500">
       <div className="flex justify-between items-center h-full w-full px-4 lg:px-16">
         <div>
           <h1 className="font-bold text-xl text-gray-300">DMD</h1>
