@@ -13,6 +13,7 @@ export default function About() {
         <Image
           src="profilepic.svg"
           width={250}
+          height={250}
           alt="profile"
           className="bg-sky-800 rounded-s-full rounded-tr-xl mt-12"
           priority

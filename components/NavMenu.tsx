@@ -36,7 +36,7 @@ const NavMenu = () => {
           <h1 className="font-bold text-xl text-gray-300">DMD</h1>
         </div>
         <div>
-          <ul className="hidden md:flex gap-4">
+          <ul className="hidden md:flex gap-8">
             <li className="uppercase hover:border-b text-white">
               <Link
                 to="home"
