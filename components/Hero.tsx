@@ -4,7 +4,7 @@ import HeroBg from "@/public/herobg.jpg";
 
 export default function Hero() {
   return (
-    <div className="">
+    <div id="home">
       <Image
         src={HeroBg}
         alt="Hero image"
