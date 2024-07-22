@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-scroll";
+import logo from "@/app/icon.png";
 
 const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +16,7 @@ const NavMenu = () => {
 
   const changeNavBg = () => {
     if (window.scrollY >= 90) {
-      setNavBg("bg-sky-800");
+      setNavBg("bg-slate-900");
     } else {
       setNavBg("bg-transparent");
     }
@@ -32,7 +34,8 @@ const NavMenu = () => {
       className={`fixed top-0 flex items-center justify-center  w-screen h-24 z-10 transition-colors duration-500 ${navBg}`}
     >
       <div className="flex justify-between items-center h-full w-full px-4 lg:px-16">
-        <div>
+        <div className="flex items-center">
+          <Image src={logo} alt="/" width={50} height={50} priority />
           <h1 className="font-bold text-xl text-gray-300">DMD</h1>
         </div>
         <div>
