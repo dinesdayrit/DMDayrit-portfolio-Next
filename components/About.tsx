@@ -4,7 +4,7 @@ export default function About() {
       className="flex flex-col justify-center items-center max-w-7xl"
       id="about"
     >
-      <h2 className="font-serif font-bold text-xl md:text-3xl mb-5  text-sky-700 mt-16">
+      <h2 className="font-serif font-bold text-xl md:text-3xl mb-5  text-sky-700">
         About me
       </h2>
       <div className="flex flex-col items-center md:flex-row gap-8 justify-center">
