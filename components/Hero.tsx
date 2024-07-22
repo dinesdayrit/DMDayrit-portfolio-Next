@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="px-16 md:px-32 max-w-7xl">
         <h2 className="font-serif font-bold text-4xl md:text-6xl text-stone-100 lg:text-7xl">
           Hello, <br />
-          I'm Dines!
+          I&apos;m Dines!
         </h2>
         <p className="md:text-lg ml-3 mr-3 text-white">
           A Web Developer{" "}
