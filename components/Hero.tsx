@@ -1,10 +1,16 @@
+import Image from "next/image";
 import React from "react";
+import HeroBg from "@/public/herobg.jpg";
 
 export default function Hero() {
   return (
-    <div className="flex items-center justify-center">
-      <h1 className="text-red-500 text-2xl outline max-w-6xl text">Hero</h1>
-      <p>asdasdasd</p>
+    <div className="">
+      <Image
+        src={HeroBg}
+        alt="Hero image"
+        className="h-screen w-screen object-cover"
+        priority
+      />
     </div>
   );
 }

@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="bg-white">
       <NavMenu />
-      <div className="mt-[100px]">{children}</div>
+      <div>{children}</div>
     </div>
   );
 }
