@@ -1,20 +1,30 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { GitBranchIcon, GithubIcon } from "lucide-react";
 import { BiLogoJavascript } from "react-icons/bi";
-import {
-  DiJavascript,
-  DiMongodb,
-  DiNodejs,
-  DiPostgresql,
-} from "react-icons/di";
+import { DiMongodb, DiPostgresql } from "react-icons/di";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import {
-  SiCssmodules,
-  SiExpress,
-  SiRedux,
-  SiReduxsaga,
-  SiTypescript,
-} from "react-icons/si";
+import { SiCssmodules, SiExpress, SiRedux, SiTypescript } from "react-icons/si";
+
+const listVariants = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+
+const itemVariants = {
+  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0.8 },
+};
 
 export default function Skills() {
   return (
@@ -23,8 +33,7 @@ export default function Skills() {
       id="skills"
     >
       <h2 className="font-serif font-bold text-xl md:text-3xl text-sky-700 flex flex-col md:flex-row gap-4 mb-5">
-        {" "}
-        Programming Skills{" "}
+        Programming Skills
       </h2>
 
       <p className="font-serif font-semibold mb-1 text-sky-500">Tech Stack</p>
@@ -32,71 +41,125 @@ export default function Skills() {
       <div className="flex flex-col gap-10 md:flex-row md:gap-40">
         <div>
           <p className="font-bold text-orange-500">Frontend:</p>
-          <ul className="text-gray-200">
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+          <motion.ul
+            className="text-gray-200"
+            initial="hidden"
+            animate="visible"
+            variants={listVariants}
+          >
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <BiLogoJavascript />
               JavaScript
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <FaReact />
               ReactJS
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <SiTypescript />
               TypeScript
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <SiCssmodules />
               css modules
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <RiTailwindCssFill />
               Tailwindcss
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <SiRedux />
               Redux
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
 
         <div>
           <p className="font-bold text-orange-500">Backend:</p>
-          <ul className="text-gray-300">
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+          <motion.ul
+            className="text-gray-300"
+            initial="hidden"
+            animate="visible"
+            variants={listVariants}
+          >
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               Rest API
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <FaNodeJs />
               nodejs
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <SiExpress />
               ExpressJS
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <GitBranchIcon />
               Git
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <GithubIcon />
               GitHub
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
 
         <div>
           <p className="font-bold text-orange-500">DB:</p>
-          <ul className="text-gray-300">
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+          <motion.ul
+            className="text-gray-300"
+            initial="hidden"
+            animate="visible"
+            variants={listVariants}
+          >
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <DiMongodb />
               mongoDB
-            </li>
-            <li className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center  gap-1">
+            </motion.li>
+            <motion.li
+              className="bg-blue-950 rounded-full px-2 py-.5 mb-1 flex items-center gap-1"
+              variants={itemVariants}
+            >
               <DiPostgresql />
               postgreSQL
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
       </div>
     </div>

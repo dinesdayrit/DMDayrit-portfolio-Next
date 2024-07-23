@@ -1,4 +1,17 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const imageVariants = {
+  hidden: { rotateY: 90 },
+  visible: {
+    rotateY: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 
 export default function About() {
   return (
@@ -10,14 +23,21 @@ export default function About() {
         About me
       </h2>
       <div className="flex flex-col items-center md:flex-row gap-8 justify-center">
-        <Image
-          src="profilepic.svg"
-          width={250}
-          height={250}
-          alt="profile"
-          className="bg-sky-800 rounded-s-full rounded-tr-xl mt-12"
-          priority
-        />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          variants={imageVariants}
+        >
+          <Image
+            src="profilepic.svg"
+            width={250}
+            height={250}
+            alt="profile"
+            className="bg-sky-800 rounded-s-full rounded-tr-xl mt-12"
+            priority
+          />
+        </motion.div>
         <p className="md:mt-16 ml-2 mr-2 md:w-1/3 font-mono text-xl text-balance text-center md:text-justify">
           &quot;Hey, I&apos;m Dines Dayrit, a dedicated web developer with a
           specialization in React.js. I&apos;m all about crafting dynamic and
