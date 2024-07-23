@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "flowbite-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -30,6 +30,8 @@ const projects = [
 ];
 
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <div
       className="bg-sky-800 py-16 flex flex-col items-center justify-center"
@@ -39,55 +41,63 @@ export default function Projects() {
         My Projects
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.1 }}
-            className="hover:text-white"
-          >
-            <Card
-              className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem]"
-              renderImage={() => (
-                <Image
-                  width={500}
-                  height={500}
-                  src={project.image}
-                  alt={`image ${index + 1}`}
-                />
-              )}
+        {projects
+          .slice(0, showAll ? projects.length : 2)
+          .map((project, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              className="hover:text-white"
             >
-              <div className="flex flex-col h-full justify-between">
-                <h5 className="text-2xl font-bold tracking-tight text-gray-200 text-center">
-                  {project.title}
-                </h5>
-                <p className="font-normal text-gray-400 hover:text-white px-2">
-                  {project.description}
-                </p>
-                {project.href && (
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-700 px-2"
-                  >
-                    Visit Site: {project.href}
-                  </a>
+              <Card
+                className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem]"
+                renderImage={() => (
+                  <Image
+                    width={500}
+                    height={500}
+                    src={project.image}
+                    alt={`image ${index + 1}`}
+                  />
                 )}
-                <ul className="flex gap-2 text-gray-200 py-2 mx-auto">
-                  {project.technologies.map((tech, techIndex) => (
-                    <li
-                      key={techIndex}
-                      className="border px-2 py-1 rounded-full hover:text-orange-500 text-sm"
+              >
+                <div className="flex flex-col h-full justify-between">
+                  <h5 className="text-2xl font-bold tracking-tight text-gray-200 text-center">
+                    {project.title}
+                  </h5>
+                  <p className="font-normal text-gray-400 hover:text-white px-2">
+                    {project.description}
+                  </p>
+                  {project.href && (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:text-blue-700 px-2"
                     >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-        ))}
+                      Visit Site: {project.href}
+                    </a>
+                  )}
+                  <ul className="flex gap-2 text-gray-200 py-2 mx-auto">
+                    {project.technologies.map((tech, techIndex) => (
+                      <li
+                        key={techIndex}
+                        className="border px-2 py-1 rounded-full hover:text-orange-500 text-sm"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Card>
+            </motion.div>
+          ))}
       </div>
+      <button
+        onClick={() => setShowAll(!showAll)}
+        className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+      >
+        {showAll ? "Show Less" : "Show More"}
+      </button>
     </div>
   );
 }
