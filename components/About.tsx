@@ -13,6 +13,17 @@ const imageVariants = {
   },
 };
 
+const textVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
 export default function About() {
   return (
     <section
@@ -38,12 +49,18 @@ export default function About() {
             priority
           />
         </motion.div>
-        <p className="md:mt-16 ml-2 mr-2 md:w-1/3 font-mono text-xl text-balance text-center md:text-justify">
+        <motion.p
+          className="md:mt-16 ml-2 mr-2 md:w-1/3 font-mono text-xl text-balance text-center md:text-justify"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          variants={textVariants}
+        >
           &quot;Hey, I&apos;m Dines Dayrit, a dedicated web developer with a
           specialization in React.js. I&apos;m all about crafting dynamic and
           interactive user interfaces that breathe life into web
           applications.&quot;
-        </p>
+        </motion.p>
       </div>
     </section>
   );
