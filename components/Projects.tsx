@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <div
-      className="bg-sky-900 py-16 flex flex-col items-center justify-center"
+      className="bg-sky-800 py-16 flex flex-col items-center justify-center"
       id="projects"
     >
       <h1 className="font-serif font-bold text-xl md:text-3xl text-white flex flex-col md:flex-row gap-4 mb-5">
@@ -13,7 +13,7 @@ export default function Projects() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
         <Card
-          className="max-w-sm shadow-lg border-transparent rounded-lg h-[26rem]"
+          className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem]"
           renderImage={() => (
             <Image width={500} height={500} src="/gis.png" alt="image 1" />
           )}
@@ -41,7 +41,7 @@ export default function Projects() {
         </Card>
 
         <Card
-          className="max-w-sm shadow-lg border-transparent rounded-lg h-[26rem]"
+          className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem]"
           renderImage={() => (
             <Image
               width={500}
