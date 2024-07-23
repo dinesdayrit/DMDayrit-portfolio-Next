@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Card } from "flowbite-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const projects = [
   {
@@ -29,7 +29,24 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+const cardVariants: Variants = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    rotateY: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
+const Projects = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
@@ -46,11 +63,15 @@ export default function Projects() {
           .map((project, index) => (
             <motion.div
               key={index}
+              initial="offscreen"
+              whileInView="onscreen"
               whileHover={{ scale: 1.1 }}
-              className="hover:text-white"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={cardVariants}
+              className="perspective-1000"
             >
               <Card
-                className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem]"
+                className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem] relative"
                 renderImage={() => (
                   <Image
                     width={500}
@@ -100,4 +121,6 @@ export default function Projects() {
       </button>
     </div>
   );
-}
+};
+
+export default Projects;

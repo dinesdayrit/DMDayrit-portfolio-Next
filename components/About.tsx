@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const imageVariants = {
+const imageVariants: Variants = {
   hidden: { rotateY: 90 },
   visible: {
     rotateY: 0,
