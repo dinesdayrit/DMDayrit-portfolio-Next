@@ -44,7 +44,8 @@ export default function Skills() {
           <motion.ul
             className="text-gray-200"
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             variants={listVariants}
           >
             <motion.li
@@ -97,7 +98,8 @@ export default function Skills() {
           <motion.ul
             className="text-gray-300"
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             variants={listVariants}
           >
             <motion.li
@@ -142,7 +144,8 @@ export default function Skills() {
           <motion.ul
             className="text-gray-300"
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             variants={listVariants}
           >
             <motion.li
