@@ -33,10 +33,10 @@ export default function Projects() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
         {projects.map((project, index) => (
-          <motion.div whileHover={{ scale: 1.1 }}>
+          <motion.div whileHover={{ scale: 1.1 }} className="hover:text-white">
             <Card
               key={index}
-              className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem]"
+              className="max-w-sm shadow-lg border-sky-900 rounded-lg h-[26rem] "
               renderImage={() => (
                 <Image
                   width={500}
@@ -47,10 +47,10 @@ export default function Projects() {
               )}
             >
               <div className="flex flex-col h-full justify-between">
-                <h5 className="text-2xl font-bold tracking-tight text-gray-300 dark:text-white text-center">
+                <h5 className="text-2xl font-bold tracking-tight text-gray-200 text-center">
                   {project.title}
                 </h5>
-                <p className="font-normal text-gray-400 dark:text-gray-400 px-2 flex-grow">
+                <p className="font-normal text-gray-400 hover:text-white  px-2 flex-grow">
                   {project.description}
                 </p>
                 <ul className="flex gap-2 text-gray-200 py-2 mx-auto">
