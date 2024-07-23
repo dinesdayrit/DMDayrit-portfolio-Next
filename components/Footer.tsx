@@ -53,36 +53,35 @@ export default function Footer() {
 
   return (
     <footer
-      className="flex flex-col justify-center text-gray-300 px-4 py-5 mx-auto md:px-8 bg-slate-900 w-full md:rounded-t-xl"
+      className="flex flex-col justify-center text-gray-300 px-4 mx-auto md:px-8 bg-slate-900 w-full md:rounded-t-xl"
       id="contact"
     >
-      <div className="gap-6 justify-between md:flex">
-        <div className="flex-1 mt-10 md:mt-0">
-          <div className="flex justify-center">
-            <ul className="space-y-4 mt-10">
-              <h4 className="text-gray-300 text-xl font-medium">Contact me</h4>
-              <li>
-                <span className="block text-white">Messenger:</span>
-                <a
-                  href={contactDetails.messenger}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>{contactDetails.messenger}</span>
-                </a>
-              </li>
-              <li>
-                <span className="block text-white">Email:</span>
-                <span>{contactDetails.email}</span>
-              </li>
-              <li>
-                <span className="block text-white">Location:</span>
-                <span>{contactDetails.location}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div className="flex justify-center">
+        <ul className="space-y-4 mt-10">
+          <h4 className="text-gray-300 text-center text-2xl font-bold">
+            Contact me
+          </h4>
+          <li>
+            <span className="block text-white">Messenger:</span>
+            <a
+              href={contactDetails.messenger}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>{contactDetails.messenger}</span>
+            </a>
+          </li>
+          <li>
+            <span className="block text-white">Email:</span>
+            <span>{contactDetails.email}</span>
+          </li>
+          <li>
+            <span className="block text-white">Location:</span>
+            <span>{contactDetails.location}</span>
+          </li>
+        </ul>
       </div>
+
       <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
         <div className="mt-4 sm:mt-0">
           &copy; 2024 DinesDayrit All rights reserved.
