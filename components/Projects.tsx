@@ -57,7 +57,7 @@ export default function Projects() {
                   {project.technologies.map((tech, techIndex) => (
                     <li
                       key={techIndex}
-                      className="border px-2 py-1 rounded-full text-sm"
+                      className="border px-2 py-1 rounded-full hover:text-orange-500 text-sm"
                     >
                       {tech}
                     </li>
