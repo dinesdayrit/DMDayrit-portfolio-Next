@@ -18,7 +18,10 @@ import {
 
 export default function Skills() {
   return (
-    <div className="flex flex-col items-center justify-center py-16">
+    <div
+      className="flex flex-col items-center justify-center py-16"
+      id="skills"
+    >
       <h2 className="font-serif font-bold text-xl md:text-3xl text-sky-700 flex flex-col md:flex-row gap-4 mb-5">
         {" "}
         Programming Skills{" "}

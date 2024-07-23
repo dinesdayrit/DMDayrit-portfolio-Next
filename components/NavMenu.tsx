@@ -107,7 +107,7 @@ const NavMenu = () => {
             </li>
             <li className="uppercase hover:border-b text-white">
               <Link
-                to="contact "
+                to="contact"
                 smooth={true}
                 duration={800}
                 activeClass="active"

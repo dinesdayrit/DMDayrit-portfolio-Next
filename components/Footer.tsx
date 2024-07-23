@@ -52,7 +52,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex flex-col justify-center text-gray-300 px-4 py-5 mx-auto md:px-8 bg-slate-900 w-full">
+    <footer
+      className="flex flex-col justify-center text-gray-300 px-4 py-5 mx-auto md:px-8 bg-slate-900 w-full md:rounded-t-xl"
+      id="contact"
+    >
       <div className="gap-6 justify-between md:flex">
         <div className="flex-1 mt-10 md:mt-0">
           <div className="flex justify-center">
