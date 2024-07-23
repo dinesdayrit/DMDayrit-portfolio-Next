@@ -13,7 +13,7 @@ const listVariants = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
   hidden: {
@@ -22,8 +22,8 @@ const listVariants = {
 };
 
 const itemVariants = {
-  visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 50 },
 };
 
 export default function Skills() {
