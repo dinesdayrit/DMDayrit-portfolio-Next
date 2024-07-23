@@ -25,8 +25,8 @@ export default function Projects() {
             <p className="font-normal text-gray-400 dark:text-gray-400 px-2 flex-grow">
               A GIS Web Application for an LGU. This application helps users
               locate the exact location of land properties and can also plot
-              parcels using their land titles' technical descriptions, as well
-              as assign Property Index Numbers (PINs).
+              parcels using their land titles technical descriptions, as well as
+              assign Property Index Numbers (PINs).
             </p>
             <ul className="flex gap-2 text-gray-200 py-2 mx-auto">
               <li className="border px-2 py-1 rounded-full text-sm">React</li>
