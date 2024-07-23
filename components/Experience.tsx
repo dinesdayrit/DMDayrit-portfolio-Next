@@ -3,7 +3,7 @@ import React from "react";
 export default function Experience() {
   return (
     <div
-      className="flex flex-col justify-center items-center w-full bg-gray-200 py-10 "
+      className="flex flex-col justify-center items-center py-10 "
       id="experience"
     >
       <div>
