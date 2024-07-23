@@ -3,12 +3,12 @@ import React from "react";
 export default function Experience() {
   return (
     <div
-      className="flex flex-col justify-center items-center w-full bg-gray-200 py-10"
+      className="flex flex-col justify-center items-center w-full bg-gray-200 py-10 "
       id="experience"
     >
       <div>
-        <h2 className="font-serif font-bold text-xl md:text-3xl mb-5  text-sky-700 flex flex-col md:flex-row gap-4 items-center">
-          Programming Job Experience
+        <h2 className="font-serif font-bold text-xl md:text-3xl mb-5  text-sky-700 text-center">
+          Programming Experience
         </h2>
 
         <p className="font-serif font-semibold mb-1 text-black">
@@ -39,7 +39,7 @@ export default function Experience() {
       </div>
       <div>
         <h2 className="font-serif font-bold text-xl md:text-3xl mb-5  text-sky-700 mt-20">
-          Non-Programming Job Experience
+          Non-Programming Experience
         </h2>
 
         <p className="font-serif font-semibold mb-4 text-gray-900">
