@@ -40,7 +40,7 @@ const NavMenu = () => {
         </div>
         <div>
           <ul className="hidden md:flex gap-8">
-            <li className="uppercase hover:border-b text-white">
+            <li className="uppercase hover:text-yellow-300 text-white">
               <Link
                 to="home"
                 smooth={true}
@@ -53,7 +53,7 @@ const NavMenu = () => {
                 Home
               </Link>
             </li>
-            <li className="uppercase hover:border-b text-white">
+            <li className="uppercase hover:text-yellow-300 text-white">
               <Link
                 to="about"
                 smooth={true}
@@ -66,7 +66,7 @@ const NavMenu = () => {
                 about
               </Link>
             </li>
-            <li className="uppercase hover:border-b text-white">
+            <li className="uppercase hover:text-yellow-300 text-white">
               <Link
                 to="experience"
                 smooth={true}
@@ -79,7 +79,7 @@ const NavMenu = () => {
                 experience
               </Link>
             </li>
-            <li className="uppercase hover:border-b text-white">
+            <li className="uppercase hover:text-yellow-300 text-white">
               <Link
                 to="projects"
                 smooth={true}
@@ -92,7 +92,7 @@ const NavMenu = () => {
                 projects
               </Link>
             </li>
-            <li className="uppercase hover:border-b text-white">
+            <li className="uppercase hover:text-yellow-300 text-white">
               <Link
                 to="skills"
                 smooth={true}
@@ -105,7 +105,7 @@ const NavMenu = () => {
                 skills
               </Link>
             </li>
-            <li className="uppercase hover:border-b text-white">
+            <li className="uppercase hover:text-yellow-300 text-white">
               <Link
                 to="contact"
                 smooth={true}
