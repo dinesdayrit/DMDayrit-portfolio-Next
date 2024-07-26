@@ -31,7 +31,7 @@ const projects = [
 
 const cardVariants: Variants = {
   offscreen: {
-    y: 300,
+    y: 50,
     opacity: 0,
   },
   onscreen: {
@@ -66,7 +66,7 @@ const Projects = () => {
               initial="offscreen"
               whileInView="onscreen"
               whileHover={{ scale: 1.1 }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: false, amount: 0.3 }}
               variants={cardVariants}
               className="perspective-1000"
             >
