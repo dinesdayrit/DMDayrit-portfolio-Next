@@ -21,6 +21,14 @@ const projects = [
     technologies: ["React", "ExpressJS", "PostGreSql"],
   },
   {
+    title: "GeoNX",
+    description:
+      "The innovative GIS application that lets you plot polygons using land title descriptions. Easily visualize and define property boundaries with precision.",
+    href: "https://geonx-gis-app.vercel.app//",
+    image: "/geonx.png",
+    technologies: ["React", "Node/Express", "Tailwindcss"],
+  },
+  {
     title: "DiAL Hub Smart Shop",
     description: "Online Store Web Application.",
     href: "https://dial-hub.vercel.app/",
