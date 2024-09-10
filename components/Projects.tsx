@@ -29,6 +29,14 @@ const projects = [
     technologies: ["React", "Node/Express", "Tailwindcss"],
   },
   {
+    title: "DiAL Hub Food Delivery App",
+    description:
+      "DiAL Hub Food App is a convenient and fast food delivery app that brings your favorite meals right to your doorstep. Explore a variety of local restaurants, customize your order, and enjoy a seamless delivery experience with just a few taps",
+    href: "https://dial-hub-food.vercel.app/",
+    image: "/DialHubFoodApp.png",
+    technologies: ["Vite + React", "TypeScript", "Tailwindcss", "express"],
+  },
+  {
     title: "DiAL Hub Smart Shop",
     description: "Online Store Web Application.",
     href: "https://dial-hub.vercel.app/",
@@ -123,7 +131,7 @@ const Projects = () => {
       </div>
       <button
         onClick={() => setShowAll(!showAll)}
-        className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+        className="mt-6 px-4 py-2 rounded-full border border-sky-500 shadow-lg text-white hover:bg-sky-700"
       >
         {showAll ? "Show Less" : "Show More"}
       </button>
