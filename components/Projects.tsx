@@ -29,9 +29,9 @@ const projects = [
     technologies: ["React", "Node/Express", "Tailwindcss"],
   },
   {
-    title: "DiAL Hub Food Delivery App",
+    title: "DiAL Foo Hub Delivery App",
     description:
-      "DiAL Hub Food App is a convenient and fast food delivery app that brings your favorite meals right to your doorstep. Explore a variety of local restaurants, customize your order, and enjoy a seamless delivery experience with just a few taps",
+      "DiAL Food hub App is a convenient and fast food delivery app that brings your favorite meals right to your doorstep. Explore a variety of local restaurants, customize your order, and enjoy a seamless delivery experience with just a few taps",
     href: "https://dial-hub-food.vercel.app/",
     image: "/DialHubFoodApp.png",
     technologies: ["Vite + React", "TypeScript", "Tailwindcss", "express"],
