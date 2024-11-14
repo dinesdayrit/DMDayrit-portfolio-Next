@@ -31,7 +31,7 @@ const projects = [
   {
     title: "DiALFix",
     description:
-      "Your one-stop solution for booking appointments with trusted service providers, whether you need a quick fix or expert help for your home or office. From PC technicians and plumbers to electricians and more, DialFix connects you with qualified professionals in your area with just a few clicks. Our app makes it easy to schedule a time that works for you, ensuring that help is always just a tap away",
+      "DialFix connects you with trusted service providers for quick, reliable help at home or the office. From PC techs to plumbers and electricians, our app lets you book qualified professionals in your area with just a few clicks.",
     href: "https://dialfix.vercel.app/",
     image: "/dialfix.png",
     technologies: ["Vite + React", "TypeScript", "Tailwindcss", "express"],
@@ -39,7 +39,7 @@ const projects = [
   {
     title: "DiAL Food Hub Delivery App",
     description:
-      "DiAL Food hub App is a convenient and fast food delivery app that brings your favorite meals right to your doorstep. Explore a variety of local restaurants, customize your order, and enjoy a seamless delivery experience with just a few taps",
+      "DiAL Food Hub brings your favorite meals to your doorstep. Browse local restaurants, customize orders, and enjoy fast delivery with just a few taps.",
     href: "https://dial-hub-food.vercel.app/",
     image: "/DialHubFoodApp.png",
     technologies: ["Vite + React", "TypeScript", "Tailwindcss", "express"],
