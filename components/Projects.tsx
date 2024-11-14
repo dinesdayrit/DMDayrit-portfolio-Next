@@ -31,7 +31,7 @@ const projects = [
   {
     title: "DiALFix",
     description:
-      "DiAL Food hub App is a convenient and fast food delivery app that brings your favorite meals right to your doorstep. Explore a variety of local restaurants, customize your order, and enjoy a seamless delivery experience with just a few taps",
+      "Your one-stop solution for booking appointments with trusted service providers, whether you need a quick fix or expert help for your home or office. From PC technicians and plumbers to electricians and more, DialFix connects you with qualified professionals in your area with just a few clicks. Our app makes it easy to schedule a time that works for you, ensuring that help is always just a tap away",
     href: "https://dialfix.vercel.app/",
     image: "/dialfix.png",
     technologies: ["Vite + React", "TypeScript", "Tailwindcss", "express"],
