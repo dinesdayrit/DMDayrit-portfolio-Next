@@ -45,6 +45,13 @@ const projects = [
     technologies: ["Vite + React", "TypeScript", "Tailwindcss", "express"],
   },
   {
+    title: "Youtube Clone",
+    description: "Youtube homepage Clone",
+    href: "https://dialtube.vercel.app/",
+    image: "/youtubeClone.png",
+    technologies: ["React", "TypeScript", "Tailwindcss"],
+  },
+  {
     title: "DiAL Hub Smart Shop",
     description: "Online Store Web Application.",
     href: "https://dial-hub.vercel.app/",
