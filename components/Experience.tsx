@@ -10,8 +10,17 @@ export default function Experience() {
         <h2 className="font-serif font-bold text-xl md:text-3xl mb-5  text-sky-700 text-center">
           Programming Experience
         </h2>
+        <p className="font-serif font-semibold mb-1 text-black ">
+          (Nov 2024 - Present) Freelance (Part-time) <br />
+          <span className="text-sky-500">Web Developer(CMS)</span>
+        </p>
+        <p className="font-bold text-orange-500 ">Tech used:</p>
+        <ul className="list-disc pl-6 text-black">
+          <li>CMS</li>
+          <li>duda website builder</li>
+        </ul>
 
-        <p className="font-serif font-semibold mb-1 text-black">
+        <p className="font-serif font-semibold mb-1 text-black mt-12">
           (Aug 2023 - Present) 8 Nexity Technology <br />
           <span className="text-sky-500">
             Web Developer(GIS Web Application for LGU)
