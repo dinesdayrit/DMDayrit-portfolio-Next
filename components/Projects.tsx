@@ -90,7 +90,7 @@ const Projects = () => {
               initial="offscreen"
               whileInView="onscreen"
               whileHover={{ scale: 1.1 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
               className="perspective-1000"
             >
