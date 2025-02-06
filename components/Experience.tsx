@@ -35,8 +35,7 @@ export default function Experience() {
         </ul>
 
         <p className="font-serif font-semibold mb-1 mt-12 text-black">
-          (March 2024 - June 2024) Codebility (A Dev community for
-          collaboration) <br />
+          (March 2024 - June 2024) Codebility (Intern) <br />
           <span className="text-sky-500">Frontend Developer</span>
         </p>
         <ul className="list-disc pl-6 text-black">
