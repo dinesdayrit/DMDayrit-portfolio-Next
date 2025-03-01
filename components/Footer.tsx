@@ -52,65 +52,68 @@ export default function Footer() {
   };
 
   return (
-    <footer
-      className="flex flex-col justify-center text-gray-300 px-4 mx-auto md:px-8 bg-slate-900 w-full md:rounded-t-xl"
-      id="contact"
-    >
-      <div className="flex justify-center">
-        <ul className="space-y-4 mt-10">
-          <h4 className="text-gray-300 text-center text-2xl font-bold">
-            Contact me
-          </h4>
-          <li>
-            <span className="block text-white">Messenger:</span>
-            <a
-              href={contactDetails.messenger}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>{contactDetails.messenger}</span>
-            </a>
-          </li>
-          <li>
-            <span className="block text-white">Email:</span>
-            <span>{contactDetails.email}</span>
-          </li>
-          <li>
-            <span className="block text-white">Location:</span>
-            <span>{contactDetails.location}</span>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
-        <div className="mt-4 sm:mt-0">
-          &copy; 2024 DinesDayrit All rights reserved.
+    <footer className="px-2 pb-2" id="contact">
+      <div className="flex flex-col justify-center text-gray-300 px-4 mx-auto md:px-8 bg-slate-900 w-full rounded-xl">
+        <div className="flex justify-center">
+          <ul className="space-y-4 mt-10">
+            <h4 className="text-gray-300 text-center text-2xl font-bold">
+              Contact me
+            </h4>
+            <li>
+              <span className="block text-white">Messenger:</span>
+              <a
+                href={contactDetails.messenger}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{contactDetails.messenger}</span>
+              </a>
+            </li>
+            <li>
+              <span className="block text-white">Email:</span>
+              <span>{contactDetails.email}</span>
+            </li>
+            <li>
+              <span className="block text-white">Location:</span>
+              <span>{contactDetails.location}</span>
+            </li>
+          </ul>
         </div>
-        <div className="mt-6 sm:mt-0">
-          <motion.ul
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.1 }}
-            variants={containerVariants}
-            className="flex items-center space-x-4"
-          >
-            {socialLinks.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <motion.li
-                  key={i}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ type: "spring", stiffness: 500 }}
-                  className="w-10 h-10 border rounded-full flex items-center justify-center"
-                >
-                  <a href={item.href} target="_blank" rel="noopener noreferrer">
-                    <Icon className={`w-6 h-6 ${item.color}`} />
-                  </a>
-                </motion.li>
-              );
-            })}
-          </motion.ul>
+
+        <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
+          <div className="mt-4 sm:mt-0">
+            &copy; 2024 DinesDayrit All rights reserved.
+          </div>
+          <div className="mt-6 sm:mt-0">
+            <motion.ul
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.1 }}
+              variants={containerVariants}
+              className="flex items-center space-x-4"
+            >
+              {socialLinks.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.li
+                    key={i}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.2 }}
+                    transition={{ type: "spring", stiffness: 500 }}
+                    className="w-10 h-10 border rounded-full flex items-center justify-center"
+                  >
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon className={`w-6 h-6 ${item.color}`} />
+                    </a>
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
+          </div>
         </div>
       </div>
     </footer>
